@@ -1,0 +1,49 @@
+java data types:
+----------------
+----------------
+1)numbers:
+    i)   byte  1 byte=8 bits=2^8=256/2(-128 to 127)
+    ii)  short 2 bytes=16 bits=2^16=65536/2(-32768 to 32767)
+    iii) int   4 bytes=32 bits=2^32=4294967296/2(-2147483648 to 2147483647)
+    iv)  long  8 bytes=64 bits=2^64=64/2(-9223372036854775808 to 9223372036854775807)
+2)Decimal:
+    i) float 4bytes(8 digits)
+    ii)double 8bytes(17 digits)
+3)text:
+    i) char 1byte char c='#';char c='\n';
+    ii)String infinite String name="Hema";
+4)true/false;
+    i)boolean 1bit boolean v=true;
+                   boolean v=12<12;
+
+
+
+
+
+
+
+operator:
+1) arithmetic operator
+  
+
+      +
+      -
+      *
+      /
+      %
+2)relational operator or comparsion operator
+       <
+       <=
+       >
+       >=
+       ==
+       !=
+note:don't use string when compare
+
+3)logical operator
+    && logical and
+       note: any one condition is false,the result will be false
+    || logical or
+       note: any one condition is true,the result will be true
+    ! loggical not
+      note: True means false ,False means true

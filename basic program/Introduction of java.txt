@@ -1,0 +1,39 @@
+Introduction:
+   In 1991 first ntroduced by James Gosling at Sun micro System
+  Java starting name was OAK language in1995 and  later it was renamed as Java
+ Java sales to oracle corporation jdk1.8 onwards maintain by oracle. The cost of Java is 2.5 billion dollar.
+ Java is a platform indepent language call os supported
+Java is a sensitive language
+ex: class name :first letter should be in the capital
+var,method:first letter should be small
+Example:
+class Employee
+{
+ int  family Mark;
+String first name;
+void get details()
+{
+}
+}
+
+
+Java extension :   .java
+Java is a both compiler & interpreter
+compiler : It is used for  to check the error in the whole programming
+interpreter:It is used for to check the error line by line in the program
+compile command: javac filename.java
+run command:java classname
+In java string is a default datatype
+If we want add the word to another word in java we use concatenation operator:+
+Java  supports partially oops concept
+Java strongly type checked language
+
+int v=100;
+float v2=33.34;
+char c='#';
+Strinfg name="Hema"
+
+Java official website:www.Oracle.com
+Java is open source software
+how to check java in your system java is installed or not?
+ command:java__ version 

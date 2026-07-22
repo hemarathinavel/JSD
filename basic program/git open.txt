@@ -1,0 +1,10 @@
+  step 1: create repository(don't forget to tick readme and license)
+step2:copy git repository link
+step3:create new floder(d:/nmvn)
+step4:open cmd:d:/nmvn> git clone paste git link
+step5: cd gitrepository
+step6:code.
+step7:add files
+step 8:git add.
+step 9:git commit -m "your message"(first timeemail,github name)
+step10:git push
