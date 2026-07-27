@@ -48,4 +48,4 @@ Coordinating and communicating with a team and other stakeholders
 
 Learning and teaching new technologies and skills
 
-	Have knowledge of be willing to self teach about programming (object oriented & functional development) and any other needed tool.
+	Have knowledge of be willing to self teach about programming (object oriented & functional development) and any other needed tool. 
