@@ -1,0 +1,78 @@
+Introduction to Programming
+=========================
+
+program?
+           
+             set of instructions.
+
+purpose  of using progrsms?
+           *)  man power reduce
+          *) fast and efficency
+          *) Accuracy
+          *)problem solving
+         * )Automatic
+         *) Secure storage
+
+
+
+variables?
+
+
+                     variables is a defined identifier
+                    storing data in RAM
+                   Temporary  memory
+                  The value can be change during the execution of the program. 
+                  ex: RAM pendrive memory card
+constant 
+                  The variable does not change the value during the execution of the program.
+              ex: cd-r dvd-r
+variable naming rules?
+          must start with alphabets(a-z) or_(underscore)
+        do not start with number,but we can use second letter onwards
+        keyword or reserve words not allowed
+      special char not allowed except
+     space not allowed
+    variable name not must be unique
+
+
+Keywords or reserve words:
+=========================
+
+	*) switch
+	*)for
+	*)static
+	*)break
+	*)continue
+	*)return
+	*)int
+	*)while
+	*)public
+	*)private
+	*)void
+	*)double	
+	*)protected
+	*)long
+	*)float
+	*)do
+	*)case
+	*)new
+	*)byte
+	*)class
+	*)if
+	*)else
+	*)char
+	*)ennum
+	*)abstract
+	*)boolean
+                   *)short
+	*)try
+	*)super
+	*)catch
+	*)throw
+	*)throws
+	*)extends
+	*)implements
+	*)finally
+	*)final
+	*)null
+                    

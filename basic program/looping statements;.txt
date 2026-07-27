@@ -1,0 +1,83 @@
+looping or iterator:
+================
+          definition: a set of same statements excutes more than the one time until the condition is false
+	
+	types:
+	1) for loop	-	fixed iteration
+	2)while loop 	-	unfixed iteration with entry loop
+	3)  do..while loop	-	unfixed iteraton with exit loop
+	4)nested loop	-	a loop with in a loop
+
+1)for loop:
+========
+
+	syntax:
+	
+	for(initial;condition;increment/decrement)
+	{
+	   statement;
+	}
+	
+
+	execution steps:
+	step 1: initial  (String value)
+	             ex:   int i=1;	
+	step 2: condition(true/false)
+	             ex:  i<10;
+		if true means goto step 3
+		if false means end loop
+	step 3: statement
+		ex:  System.out.println(i);
+	step 4: increment/decrement
+		ex: i++ or i=i+1 or i+=1
+	step 5: step2
+
+ex:
+	for(int i=5;i<15;i+=3)
+	{
+	     System.out.priintln(i);
+	}
+o/p: 5 8 11 14
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
