@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Multiplication",
+            "request": "launch",
+            "mainClass": "Multiplication",
+            "projectName": "JSD_5da7f8ad"
+        },
+        {
+            "type": "java",
             "name": "Prime2",
             "request": "launch",
             "mainClass": "Prime2",
