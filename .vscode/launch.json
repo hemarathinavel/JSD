@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Reverse2",
+            "request": "launch",
+            "mainClass": "Reverse2",
+            "projectName": "JSD_5da7f8ad"
+        },
+        {
+            "type": "java",
             "name": "Indexchar",
             "request": "launch",
             "mainClass": "Indexchar",
