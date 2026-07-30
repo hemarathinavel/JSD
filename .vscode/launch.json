@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Removespace",
+            "request": "launch",
+            "mainClass": "Removespace",
+            "projectName": "JSD_5da7f8ad"
+        },
+        {
+            "type": "java",
             "name": "Count",
             "request": "launch",
             "mainClass": "Count",
