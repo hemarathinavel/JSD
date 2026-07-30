@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Count",
+            "request": "launch",
+            "mainClass": "Count",
+            "projectName": "JSD_5da7f8ad"
+        },
+        {
+            "type": "java",
             "name": "JumpDemo",
             "request": "launch",
             "mainClass": "JumpDemo",
