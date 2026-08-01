@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UserFun",
+            "request": "launch",
+            "mainClass": "UserFun",
+            "projectName": "JSD_e28857b9"
+        },
+        {
+            "type": "java",
             "name": "Whilesum",
             "request": "launch",
             "mainClass": "Whilesum",

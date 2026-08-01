@@ -15,6 +15,7 @@ public class Indexchar {
         }
         if(count==0)
             System.out.println("not found");
+        scan.close();
         }
     }
 

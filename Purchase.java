@@ -15,6 +15,7 @@ public class Purchase {
              System.out.println(price*8/100);
             else
              System.out.println(price*8/100);
+            scan.close();
     }
     }
 
