@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Whilesum",
+            "request": "launch",
+            "mainClass": "Whilesum",
+            "projectName": "JSD_e28857b9"
+        },
+        {
+            "type": "java",
             "name": "WhileDemo",
             "request": "launch",
             "mainClass": "WhileDemo",
