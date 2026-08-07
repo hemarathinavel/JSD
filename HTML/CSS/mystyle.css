@@ -1,0 +1,19 @@
+h1
+{
+    background-color: blueviolet;
+    border: 5px solid peru;
+}
+h2
+{
+    background-color: aquamarine;
+    border: 5px solid plum;
+}
+h3
+{
+    background-color: cornsilk;
+    border: 5px solid orange;
+}
+*
+{
+    font-size: 45px;
+}
