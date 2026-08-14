@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function leapornot()
+        {
+            var n=parseInt(document.getElementById("t1").value);
+        if(n%4==0)
+        {
+            document.getElementById("Result").innerHTML=n+"is leap year";
+        }
+        else
+        {
+            document.getElementById("Result").innerHTML=n+"is not a leap year";
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter no 1">
+    <br>
+    <input type="button" value="Leap or Not" onclick="leapornot()">
+    <br>
+    <div id="Result"></div>
+    
+</body>
+</html>

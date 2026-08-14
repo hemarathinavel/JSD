@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function colors()
+        {
+            document.getElementById("myimage").src="./images/"+event.target.value+".png"
+
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1><center>Images:</center></h1>
+    <label>Select Image:</label>
+    <pre>
+    <input type="radio" onchange="colors()" name="col" value="Hemalatha">Hemalatha
+    <input type="radio" onchange="colors()" name="col" value="Hemaprofessional">Hemaprofessional
+    
+    
+    <br>
+    <center>
+        <img src=""  width="60" id="myimage">
+    </center>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Showhide()
+        {
+            var t=document.getElementById("pw");
+            if(t.type==="password")
+            t.type="text";
+            else
+            t.type="password";
+        }
+    </script>
+    <!--<style type="tex/css">
+        #but
+        {
+        position:relative;
+        left"-110px
+        }
+    </style>-->
+</head>
+<body>
+    <input  id="pw" type="password" placeholder="Enter password">
+    <button onclick="Showhide()">Show/Hide</button>
+    
+</body>
+</html>

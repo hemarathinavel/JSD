@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function checkEvenOdd()
+        {
+            var n1=parseInt(document.getElementById("t1").value);
+            
+           if(n1%2==0)
+           {
+            document.getElementById("Result").innerHTML=n1+"is Even";
+           }
+           else
+           {
+            document.getElementById("Result").innerHTML=n1+"is Odd";
+        }
+
+         
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter no 1">
+    <br>
+    <input type="button" value="Even or Odd" onclick="checkEvenOdd()">
+    <br>
+    <div id="Result"></div>
+    
+</body>
+</html>
