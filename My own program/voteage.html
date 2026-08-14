@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function voteage()
+        {
+            var n1=parseInt(document.getElementById("t1").value);
+        if(n1>=18)
+        {
+            document.getElementById("Result").innerHTML=n1+"Eligble for vote";
+        }
+        else
+        {
+            document.getElementById("Result").innerHTML=n1+"Not Eligble for vote";
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter no 1">
+    <br>
+    <input type="button" value="Vote or Not" onclick="voteage()">
+    <br>
+    <div id="Result"></div>
+    
+</body>
+</html>

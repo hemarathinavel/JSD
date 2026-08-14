@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var i=1;
+        function showimage()
+        {
+            if(i==1)
+            document.getElementById("myimage").src="./images/images.jfif";
+            if(i==2)
+            document.getElementById("myimage").src="./images/Shinchan.jfif";
+            if(i==3)
+            document.getElementById("myimage").src="./images/Hemalatha.png";
+            if(i==4)
+            document.getElementById("myimage").src="./images/Hemaprofessional.png";
+            i++;
+            if(i>=5)
+            i=1;
+            setTimeout(showimage,1000);
+        }
+        
+    </script>
+</head>
+<body onload="showimage()">
+    <center>
+        <img style="border: 10px ridge pink;" id="myimage" src="./images/images.jfif" width="90%">
+    </center>
+    
+</body>
+</html>

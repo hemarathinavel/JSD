@@ -9,22 +9,37 @@
         {
             var t=document.getElementById("pw");
             if(t.type==="password")
+            {
             t.type="text";
+            document.getElementById("myimage").src="./images/Eyeopen.png";
+            }
             else
+            {
+
             t.type="password";
+            document.getElementById("myimage").src="./images/Eyeclosed.png";
+            }
         }
     </script>
-    <!--<style type="tex/css">
+    <style type="tex/css">
         #but
         {
         position:relative;
-        left"-110px
+        left:-110px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
         }
-    </style>-->
+    </style>
 </head>
 <body>
     <input  id="pw" type="password" placeholder="Enter password">
     <button onclick="Showhide()">Show/Hide</button>
+    <button id="but1" onclick="Showhide()">
+        <img  id="myimage" src="./images/Eyeclosed.png"width="10px" >
+    </button>
+    <br>
     
 </body>
 </html>
