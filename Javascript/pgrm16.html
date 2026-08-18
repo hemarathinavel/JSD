@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function display()
+        {
+            var n1=parseInt(document.getElementById("t1").value);
+            var n2=parseInt(document.getElementById("t2").value);
+            var ans="";
+            for(var i=n1;i<=n2;i++)
+            {
+                if(i<=20)
+                continue;
+            ans=ans+i+" ";
+            }
+            document.getElementById("res").innerHTML=ans;
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Jumping statement 1.continue 2.break</center></h1>
+    <input type="text" id="t1" placeholder="Enter a number 1:"> 
+    <br>
+    <input type="text" id="t2" placeholder="Enter a number 2:">
+    <br>
+    <input type="button" value="continue test" onclick="display()">
+    <br>
+    <div id="res"></div>
+</body>
+</html>

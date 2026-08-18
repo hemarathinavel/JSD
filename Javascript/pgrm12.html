@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show()
+        {
+            var sname=document.getElementById("t1").value;
+            switch(sname)
+            {
+                case "Hemalatha":
+                    document.getElementById("myimages").src="./images/Hemalatha.png";
+                    break;
+                case "Hemaprofessional":
+                    document.getElementById("myimages").src="./images/Hemaprofessional.png";
+                    break;
+                case "images":        
+                    document.getElementById("myimages").src="./images/images.jfif";
+                    break;
+                case "Shinchan":   
+                    document.getElementById("myimages").src="./images/Shinchan.jfif";
+                    break;
+                default:
+                    document.getElementById("myimages").src="./images/Eyeclosed.png";
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <input id="t1" type="text" placeholder="Enter Your Name" onblur="show()">
+    <br>
+    <img src="" id="myimages" width="80%" align="center">
+
+    
+</body>
+</html>

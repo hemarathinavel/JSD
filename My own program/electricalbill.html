@@ -10,9 +10,9 @@
             var n = parseInt(document.getElementById("t1").value);
         if(n<=100)
         {
-              var bill = n * 2;
-                document.getElementById("Result").innerHTML = n + " units = ₹" + bill;
-            }
+            var bill = n * 2;
+            document.getElementById("Result").innerHTML = n + " units = ₹" + bill;
+        }
         else if(n<=200)
         {
             var bill=n*3;
@@ -20,10 +20,9 @@
         }
         else
         {
-            var bill=n*5;
+            var bill=n*5 ;
             document.getElementById("Result").innerHTML=n + " units = ₹" + bill;
         }
-        
         }
 
     </script>
@@ -34,6 +33,5 @@
 <input type="button" value="Calculate Bill" onclick="electricityBill()">
 <br>
 <div id="Result"></div>
-    
 </body>
 </html>
