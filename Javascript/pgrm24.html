@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function dis()
+        {
+            var data=document.getElementById("t1").value;
+         // var re=/^[^a-zA-Z0-9]*$/;
+            var re=/^[A-Z]{1}[ ]{1}[A-Z]+$/;                            
+            if(data.match(re))
+            alert("valid");
+            else
+            alert("invalid format")
+        }
+    </script>
+</head>
+<body>
+    <h1> Regular expression only sepical character(min 0;max: infinite)</h1>
+    //<input type="text" id="t1" placeholder="Enter Special chrs:">
+    <input type="text" id="t1" placeholder="Enter name">
+    <br>
+    <input type="button" value="validate" onclick="dis()">
+    <br>
+    <div id="res"></div>
+    
+</body>
+</html>
