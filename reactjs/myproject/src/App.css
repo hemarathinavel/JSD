@@ -1,8 +1,17 @@
 .App {
   text-align: center;
 }
+img
+{
+  border-radius: 50px;
+  border: 15px dotted purple;
+  outline: 15px solid pink;
+  outline-offset: 50px;
+  padding: 30px;
+  margin: 100px;
+}
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
