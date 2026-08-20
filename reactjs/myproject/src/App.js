@@ -1,4 +1,34 @@
-import React from "react";
+
+import React from 'react'
+
+function App() {
+  var arr=[11,22,33,44,55,66,77,88,99];
+  var small=0;
+  return (
+    <div>
+      <h1>Array Demo</h1>
+      {arr.map((item)=>item)}
+      <br></br>
+      {arr.map((item)=><>{item}</>)}
+      {arr.map((item)=><><br></br>{item}</>)}
+      <ol type='A'>
+        {arr.map((v)=><li>{v}</li>)}
+      </ol>
+    <div style={{display:"none"}}>
+      <h1>small number of array</h1>
+      {arr.map((v)=><>{ small>v &&<>{small=v}</>}</>)}
+
+    </div>
+    <h1>small Number:{small}</h1>
+
+
+    </div>
+    
+  )
+}
+export default App
+
+/*import React from "react";
 function App(){
   var arr=[11,22,33,44,55,66,77];
   return(

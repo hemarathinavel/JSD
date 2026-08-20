@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <script type="text/javascript">
+        function show(){
+            var size=parseInt(document.getElementById("t1").value);
+            var arr=new Array(size);
+            for( var i=0;i<size;i++)
+            {
+                arr[i]=parseInt(prompt("Enter array value at index:"+i));
+            }
+            for(var i=0;i<size;i++)
+            {
+                document.write("<br> value "+i+" = "+arr[i]);
+            }
+        
+     var big=arr[0];
+     for(var i=1;i<size;i++)
+     {
+        if(big<arr[i])
+        big=arr[i];
+    }
+    document.write("<br> Biggest Number:"+big);
+}
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter array size">
+    <br>
+    <button onclick="show()">array demos</button>
+    
+</body>
+</html>
