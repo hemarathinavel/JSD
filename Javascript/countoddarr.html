@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show(){
+             var size=parseInt(document.getElementById("t1").value);
+            var arr=new Array(size);
+            for( var i=0;i<size;i++)
+            {
+                arr[i]=parseInt(prompt("Enter array value at index:"+i));
+            }
+        var esum=0;
+        var codd=0;
+        for(var i=0;i<size;i++)
+        {
+            if(arr[i]%2===0)
+            esum=esum+arr[i];
+            else
+            codd++;
+        }
+        
+        document.write("<br> sum of even numbers:"+esum);
+        document.write("<br> count of odd numbers:"+codd);
+        }
+        document.getElementById("result").innerHTML = "Sum of even numbers: " + esum;
+        document.getElementById("result").innerHTML = "Count of odd numbers:"  +codd;
+
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter the array value">
+    <br>
+    <input type="button"  value="Array" onclick="show()">
+    <br>
+    <div id="result"></div>
+</body>
+</html>

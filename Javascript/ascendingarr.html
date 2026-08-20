@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show()
+        {
+            var size=parseInt(document.getElementById("t1").value);
+            var arr=new Array(size);
+            for( var i=0;i<size;i++)
+            {
+                arr[i]=parseInt(prompt("Enter array value at index:"+i));
+            }
+            var temp=0;
+            for(var i=0;i<size;i++)
+            {
+                for(var j=i+1;j<size;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                        temp=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
+                    }
+                }
+            }
+            
+            document.getElementById("result").innerHTML="Ascending Array" +arr.join(" ,");
+             
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter the array value">
+    <br>
+    <input type="button"  value="Array" onclick="show()">
+    <br>
+    <div id="result"></div>
+</body>
+</html>
