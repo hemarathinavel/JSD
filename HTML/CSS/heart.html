@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Words Heart</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, #2a1140 0%, #150a24 100%);
+            font-family: "Segoe UI", "PingFang SC", sans-serif;
+        }
+
+        .stage {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .love_word {
+            position: absolute;
+            color: #ea80b0;
+            font-size: 1rem;
+            text-shadow: 0 0 10px #fff;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transform-origin: center;
+            animation-name: popIn;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.2) rotateZ(var(--rot, 0deg));
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.15) rotateZ(var(--rot, 0deg));
+            }
+            80% {
+                transform: scale(0.95) rotateZ(var(--rot, 0deg));
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotateZ(var(--rot, 0deg));
+            }
+        }
+
+        .pulse {
+            animation: pulseGlow 2.4s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { text-shadow: 0 0 10px #fff; }
+            50% { text-shadow: 0 0 20px #fff, 0 0 30px #ea80b0; }
+        }
+
+        .center_msg {
+            position: absolute;
+            bottom: 6%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 1.4rem;
+            text-align: center;
+            text-shadow: 0 0 12px #ea80b0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage" id="stage">
+        <div class="center_msg">I love you 💗</div>
+    </div>
+
+    <script>
+        const words = [
+            "I love you", "喜欢你", "想你了", "You & Me", "Forever",
+            "心动", "宝贝", "My Love", "永远爱你", "❤", "亲爱的", "Always"
+        ];
+
+        const stage = document.getElementById('stage');
+        const stageW = window.innerWidth;
+        const stageH = window.innerHeight;
+
+        // Center of the heart on screen
+        const cx = stageW / 2;
+        const cy = stageH / 2 - 20;
+
+        // Scale factor controls heart size relative to screen
+        const scale = Math.min(stageW, stageH) / 30;
+
+        // Parametric heart curve:
+        // x = 16 sin^3(t)
+        // y = 13 cos(t) - 5 cos(2t) - 2 cos(3t) - cos(4t)
+        function heartPoint(t) {
+            const x = 16 * Math.pow(Math.sin(t), 3);
+            const y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
+            return { x: cx + x * scale, y: cy - y * scale };
+        }
+
+        const totalPoints = 60; // outline density
+        const delayStep = 40; // ms between each word appearing
+
+        let i = 0;
+        for (let n = 0; n < totalPoints; n++) {
+            const t = (n / totalPoints) * Math.PI * 2;
+            const { x, y } = heartPoint(t);
+
+            // small random jitter so it doesn't look too mechanical
+            const jitterX = (Math.random() - 0.5) * 10;
+            const jitterY = (Math.random() - 0.5) * 10;
+
+            const el = document.createElement('span');
+            el.className = 'love_word';
+            el.textContent = words[Math.floor(Math.random() * words.length)];
+
+            const rot = (Math.random() - 0.5) * 20; // slight tilt
+            el.style.setProperty('--rot', rot + 'deg');
+            el.style.left = (x + jitterX) + 'px';
+            el.style.top = (y + jitterY) + 'px';
+            el.style.fontSize = (0.8 + Math.random() * 0.6) + 'rem';
+            el.style.animationDelay = (n * delayStep) + 'ms';
+
+            stage.appendChild(el);
+
+            // after it pops in, start a gentle glow pulse
+            setTimeout(() => el.classList.add('pulse'), n * delayStep + 600);
+        }
+
+        // Fill some points inside the heart too, for a fuller look
+        function isInsideHeart(px, py) {
+            // normalize back to heart-curve space
+            const nx = (px - cx) / scale;
+            const ny = -(py - cy) / scale;
+            // rough inside test using the heart implicit function
+            const f = Math.pow(nx * nx + ny * ny - 1, 3) - nx * nx * Math.pow(ny, 3);
+            return f <= 0.7 && Math.abs(nx) < 17 && ny > -6 && ny < 13;
+        }
+
+        let filled = 0;
+        let attempts = 0;
+        while (filled < 35 && attempts < 800) {
+            attempts++;
+            const px = cx + (Math.random() - 0.5) * scale * 34;
+            const py = cy - (Math.random() * scale * 15 - scale * 6);
+            if (isInsideHeart(px, py)) {
+                filled++;
+                const el = document.createElement('span');
+                el.className = 'love_word';
+                el.textContent = words[Math.floor(Math.random() * words.length)];
+                const rot = (Math.random() - 0.5) * 15;
+                el.style.setProperty('--rot', rot + 'deg');
+                el.style.left = px + 'px';
+                el.style.top = py + 'px';
+                el.style.fontSize = (0.7 + Math.random() * 0.5) + 'rem';
+                el.style.opacity = '0.85';
+                const delay = totalPoints * delayStep + filled * 30;
+                el.style.animationDelay = delay + 'ms';
+                stage.appendChild(el);
+                setTimeout(() => el.classList.add('pulse'), delay + 600);
+            }
+        }
+    </script>
+</body>
+</html>
