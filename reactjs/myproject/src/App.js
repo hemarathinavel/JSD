@@ -1,4 +1,84 @@
 import React from 'react'
+import axios from 'axios'
+import { useState } from 'react'
+function App(){
+  const[city,setCity]=useState("Salem")
+  const[result,setResult]=useState(null)
+
+  const cityFun=(Event)=>{
+    setCity(Event.target.value)
+    
+  }
+ const show=async()=>{
+    const apiurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=64e032b7d7092f93756812972850a40e`
+    
+     await axios.get(apiurl).then((Response)=>{
+      setResult(Response.data)
+      console.log(result)
+    }).catch((err)=>{
+      setResult(err.response.data)
+      console.log(err.Response.data)
+    })
+    
+    
+    
+    
+    //console.log(apiurl)
+  }
+  return(
+    <div>
+      <h1><center>Weather Report all over world</center></h1>
+      <h1><center>By using city name</center></h1>
+      <h2>Developed by Hema</h2>
+      <hr size="10" color="green"></hr>
+      <input type="text" value={city} onChange={(e)=>cityFun(e)}name="city" placeholder="cityname"></input>
+      <input type="button" value="Find the weather report" onClick={show}></input>
+      <hr size="10" color='pink'></hr>
+      {result!==null && result.cod===200 &&<> <h2>Country & City:{result.sys.country}-{result.name}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Main Report:{result.weather[0].main}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Description:{result.weather[0].Description}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Wind speed:{result.wind.speed}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Temperature:{result.main.temp}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Humidity:{result.main.humidity}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Sea_level:{result.main.sea_level}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Co-ord(lat lon):{result.coord.lat} {result.coord.lon}</h2></>}
+      {result!==null && result.cod==="404" && <font color='red' size='5'><b>Result:{result.message}</b></font>}
+
+
+    </div>
+  )
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React from 'react'
 
 function App() {
   let dis=()=>{
@@ -21,7 +101,7 @@ function App() {
     var f=parseInt(document.getElementById("t6").value);
     var g=a+b+c+d+e+f
     document.getElementById("res").innerHTML="Total:"+g;*/
-return (
+/*return (
     <div>
       <input type='text' id='t1' placeholder='Enter number 1'></input><br></br>
       <input type='text' id='t2' placeholder='Enter number 2'></input><br></br>
