@@ -1,0 +1,20 @@
+basic for loop:
+===========
+1) sum of series
+2)prime  or not
+3)vowels+count
+4)fibbonacci series
+5)multiplication table
+6)reverse name
+7)fnd index of the char
+
+
+
+
+Find  the index of the char
+----------------------------------
+	step 1: get text/name input from user				Scanner,next()
+	step 2:get single letter input from user			                   next().chartAT(0)
+	step 3:calculate length of text					name.length()
+	step 4:condition(check char in text)				for() {if (),char AT()} s.o.p
+ 	step 5:result :print index of the char/not found

@@ -1,0 +1,7 @@
+table concept:
+in table we use rows and columns
+here we rows first and we used column inside the rows 
+row tag<tr></tr>
+column tag<td></td>
+ in column the td  we use as data
+in table we use border at table tag for creating a box

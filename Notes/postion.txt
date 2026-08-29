@@ -1,0 +1,32 @@
+title:position
+
+
+type:
+	static---->default
+		*)seprate place
+		*)scrolling:yes
+		*)outside screen:yes
+		*)left,right,top,bottom:no
+	absolute
+		*)no seprate place
+		*)scrolling:yes
+		*)outside screen :yes
+		*)left,right,top,bottom:yes
+
+	fixed
+		*)no seprate place
+		*)scrolling:no
+		*)outside screen :yes
+		*)left,right,top,bottom:yes
+
+	relative
+		*) seprate place:yes
+		*)scrolling:yes
+		*)outside screen :yes
+		*)left,right,top,bottom:yes(but 		previous  tag)
+
+	sticky
+		) seprate place:yes
+		*)scrolling:yes
+		*)outside screen :no
+		*)left,right,top,bottom:yes

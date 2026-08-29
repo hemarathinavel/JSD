@@ -1,0 +1,10 @@
+prerequest to learn user defined functions or method:
+=============================================
+	()
+	calling function or method	zero to many times
+	called function or method	only one time
+	arguments or parameters	called function(datatype)
+				calling function(variables/value)
+	void--> no return(don't use return keyword)
+	return--> return is must if don't use void
+	--->only mention at last line of called function

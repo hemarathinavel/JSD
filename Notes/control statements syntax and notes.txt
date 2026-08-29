@@ -1,0 +1,88 @@
+control statements:
+-------------------
+-------------------
+def : condition based execution
+ 
+
+
+condition: a>34
+          mark>=50
+          m1>34 && m2>34 && m3>34
+          !(m>=35)
+          name.equals("admin")&& pwd.equals("password@123")
+
+
+1) simple if
+      
+syntax:
+if (condition)
+{
+ statement;
+}
+ex:
+ if (mark>34)
+ {
+System.out.println("pass");
+}
+
+
+2) if else statement
+syntax:
+if(condition)
+{
+true statement;
+}
+else
+{
+false statement;
+}
+ex:
+if(mark>34)
+{
+system.out.println("pass");
+}
+else
+{
+system.out.println("fail");
+}
+
+
+3) if else if statement or else if ladder
+
+definiton: infinite chance
+
+syntax:
+if(condition1)
+{
+ statement1;
+}
+else if(condition2)
+  {
+statement2;
+}
+else if (condition 3)
+{
+statement3;
+}
+-----------------------
+-----------------------
+else
+{
+else statement
+} 
+
+
+4)nested if
+def: a if statement with in the if statement
+	
+
+syntax:
+     if (condition)
+     {
+            if (conditon)
+          {
+               statement;
+         }
+     } 
+  
+ 

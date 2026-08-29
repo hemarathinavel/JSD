@@ -1,0 +1,9 @@
+Array:
+	def: a set of value arranged in sequential of single name variable ia known as array.
+Array Syntax:
+	Var variablename=new Array(size);
+Array Syntax:
+	var variablename[]={value1,value2.....}
+array index always start from:0
+inbuild:
+arrayvariablename.length

@@ -1,0 +1,43 @@
+switch case statement:
+====================
+    def:expression based execution
+  expersion ? var var+1  a+b/c  a*c
+
+
+syntax :
+
+switch(expression)
+{
+ case value1:
+        statement;
+       break;
+case value2;
+      statement;
+      break;
+case value3:
+      statement;
+     break;
+------------------------
+default:
+     default statement;
+}
+ex:
+int k=1;
+switch(k)
+{
+case value1:
+       Sytem.out.println(one);
+       break;
+case value2:
+       System.out.println(two);
+      break;
+case value3:
+       system.out.println(three);
+       break;
+default:
+        Sytem.out.println("Invalid Number);
+        break;
+}
+
+
+      

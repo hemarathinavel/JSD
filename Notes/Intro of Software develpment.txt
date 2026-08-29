@@ -1,0 +1,51 @@
+Content : Introduction to Software Development
+
+There are 3 types of software
+      System software
+     Application  Software
+    Network Software
+
+Roles and Rresponsibilties of a Software Engineer
+Primary responsiblities of an entry level software Engineer:
+                Developing Solutions
+               Testing and finnalsing solutions
+              Fixing errors
+              Coordinating and communicating with a team nd other stake holders
+             Learning and teaching new technologies and skills
+
+
+Developing Solutions:
+          	Under stand task that is being asked of you.
+	Review existing documentation on the topic (eg: online or inside the company)
+	Propose an approach to solve the task
+	Ask questions needed to clarify task.
+	Use coding best practices and design patterns (eg: naming conventions,track changes,version control,consistency throughout code. make code self.explanatory)
+	Write code needed for solution
+	Reuse code when appropriate.  
+
+Testing and Finishing solutions
+	
+	Use a Devops approach to make code reviews along the coding process
+	Have knowledge of be willing to self-teach about tests (e.g: Unit testing)
+	Track code production (e.g:  APM to track systems and discover error)
+	Test solutions across different softwares.
+
+Fixing errors:
+	
+	Locate the code that contains error independently or with support from colleagues
+	Test the functionality that has an error
+	Understand the technical details of the cuurent error
+	Test that the solution is working correctly
+	Test everything that can be affected by the error(whole system)
+
+Coordinating and communicating with a team and other stakeholders
+
+	Particpate in  and organise team discussions(eg: Sprint Planning,Daliy Scrum,Sprint Retrospective)
+	Use team meetings as an opportunity to raise questions and problems (concrning your own /others work)
+ 	Defne situations in which it is acceptable to reach  out to be a collague for helps independent probling solving
+	Find trusted contact   persons who are willing to help
+	Identity desired ways of support provide by selected contact persons(e.g: pair programming online chat tools like slack,reviwes on github etc)
+
+Learning and teaching new technologies and skills
+
+	Have knowledge of be willing to self teach about programming (object oriented & functional development) and any other needed tool.

@@ -1,0 +1,44 @@
+JAVA  SCRIPT:
+===========
+	*in 1995 first introduce by Brendan Eich
+	*starting name:livescript
+	*developed ECMAscript-262(organizaton approved by  ISO)
+	*only netscape navigator 2.0 first worked
+	*all browsers worked from 1996.
+	*javascript is the case sensitive.
+	*java extenion:.js
+	*main use: interact with html codes
+	*java and javascript are different
+	*joining operator + or concatenation operator
+	*java script is the interpreter(line by line error check)
+	*javascript is loosly type checked language
+	*var a=10;--->integer
+	*var b=10.20;------->float
+	*var c="text@123";----->string
+General format:
+=============
+<html>
+<head>
+	<script type="text/javascript">
+	.....................................
+	</script>
+</head>
+<body>
+	...................................
+</body>
+</html>
+
+
+difference b/w var,let and const:
+__________________________________
+var&let--------------------->we can change the value
+const------------------------> we can't change the value
+
+var:------------------------->global scope
+let & const:---------------->local scope
+
+
+innerHTML:
+==========
+
+purpose: do not hide html form elements

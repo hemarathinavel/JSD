@@ -1,0 +1,23 @@
+Escape sequence or format specifier:
+___________________________________
+___________________________________
+purpose:to  aligment puropose
+ 
+
+
+\n -cursor moves to bew line
+\t -tap space
+\b -backspace
+\0 -null char
+\r -over written
+\" -double quotes
+\' -single quotes
+\\ -single slash
+
+
+
+class Sample
+{
+  public static void main(String args[])
+  {
+   System.out.println("Welcome to java");

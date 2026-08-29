@@ -1,0 +1,12 @@
+CSS Introduction:
+----------------------
+CSS-Cascading Style Sheet
+	
+	use:webpage excellent design in easy way
+	invented by:w3c company(World wide web consoritum)
+	year:1996(level 1 dec 17)
+	css created by Hakon Wium Lie and Bert Bos.
+Types of css:
+	Inline in css-with in a tag
+	Internal css-head tag+whole single html program
+	External css-head tag+onr or more html programs

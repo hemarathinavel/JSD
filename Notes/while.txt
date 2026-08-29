@@ -1,0 +1,12 @@
+1)Count alpahabets numbers and special chars
+
+Enter Text:
+	
+	karur.hema05r@gmail.com
+output:
+	while checking char @  implement break
+2) enter your text:
+  I       	am 		so	 good
+output:
+i am so good
+	

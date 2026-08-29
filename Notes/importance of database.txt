@@ -1,0 +1,24 @@
+How to create database?
+
+-------------> use yourdbname
+ex:
+test> use nmvnjsd
+
+===============================================
+how to insert sample?
+ nmvnjsd> db.collection.insertOne{(})
+
+ex:
+nmvnjsd>db.student.insertOne
+({rno:1001,sname:"hema",mark:98})
+
+insert 10 records
+==================================================how to view all databases?
+> show dbs
+==========================================
+how to view all collections from a db?
+>show collections
+==============================================
+how to change one db to another db?
+>use olddbname
+===============================================
