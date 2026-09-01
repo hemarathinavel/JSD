@@ -1,0 +1,25 @@
+operator:
+1) arithmetic operator
+  
+
+      +
+      -
+      *
+      /
+      %
+2)relational operator or comparsion operator
+       <
+       <=
+       >
+       >=
+       ==
+       !=
+note:don't use string when compare
+
+3)logical operator
+    && logical and
+       note: any one condition is false,the result will be false
+    || logical or
+       note: any one condition is true,the result will be true
+    ! loggical not
+      note: True means false ,False means true

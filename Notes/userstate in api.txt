@@ -1,0 +1,28 @@
+What is pupose of using usestate Hook?
+	-->Runtime data management
+	-->automatically update DOM when state changes.
+
+
+
+notes:
+step 1:
+header file:
+import {usestate} from 'react'
+
+step 2:
+declaration
+const [var,setVar]=userState("default value")
+ex:
+const [city ,setCity]=userState("Karur")
+
+
+step 3:
+<input type="text" value=(city) onchange={(e)=>dis(e)}></input>
+
+step4:
+change the state:(important)
+setCity("yourvalue")
+ex:
+count dis=(Event)=>{
+setCity(Event.target.value)
+}

@@ -1,0 +1,97 @@
+jumping statement:
+=================
+	1) continue ---> skip the remaining statement
+		 ----->directly move on to the increment position
+	2)break------  > terminate or end loop
+note:
+              contains:only work on inside the loop
+	break:its work on the both loop+switch
+
+
+
+
+
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                if (i>=10 && i<30) 
+                    continue;
+                System.out.println(" "+i);
+                    
+                
+            }
+    }
+    
+}
+
+
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                if (i<=30) 
+                    continue;
+                System.out.println(" "+i);
+                    
+                
+            }
+    }
+    
+}
+
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                if (i>=30 || i<=10) 
+                    continue;
+                System.out.println(" "+i);
+                    
+                
+            }
+    }
+    
+}
+
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                if (i==10 || i==20|| i==30) 
+                    continue;
+                System.out.println(" "+i);
+                    
+                
+            }
+    }
+    
+}
+
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                System.out.println(" "+i);
+                if (i<=30)
+                    break;
+                
+                }
+            System.out.println(" end");
+    }
+    
+}
+public class JumpDemo {
+    public static void main(String[] args) {
+        for(int i=5;i<=40;i++)
+            {
+                System.out.println(" "+i);
+                if (i==10 || i>20)
+                    break;
+                
+                }
+            System.out.println(" end");
+    }
+    
+}
+

@@ -1,0 +1,11 @@
+hyper text means to  connect the old to new file
+markup means tags single elements
+language means to talk to structure
+
+
+
+html: structure
+css :styling
+<>=angular open and close bracket
+<html>----------> this means tags
+<!DOCTYPE html>------------>document type declaration

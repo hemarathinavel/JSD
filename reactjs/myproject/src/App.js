@@ -49,35 +49,6 @@ function App(){
   )
 }
 export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*import React from 'react'
 
 function App() {
@@ -116,76 +87,7 @@ function App() {
     </div>
   )
 }
-export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default App*/
 /*import React from 'react'
 
  function App() {

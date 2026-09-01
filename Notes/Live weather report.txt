@@ -1,0 +1,17 @@
+echo "# Live-weather-project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hemarathinavel/Live-weather-project.git
+git push -u origin main
+
+
+
+
+For live weather
+ first we have create the repository
+after that we have copy the given link when we see by browsing  down
+
+after that first cd reactjs
+second cd myproject

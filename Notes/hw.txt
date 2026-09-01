@@ -1,0 +1,5 @@
+hw:
+----
+	1)given no.is even or odd
+	2)given no.is +ve/-ve/0
+	3)given year is leap or not

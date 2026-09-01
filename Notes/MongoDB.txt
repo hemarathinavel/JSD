@@ -1,0 +1,45 @@
+Mongo db introduction:
+=====================
+	It is a o opensource
+	It only run on JSON
+	Mongo is an open source,document oriented(paragraph format) database that stores data n form of documents(key and value pairs).
+
+
+Document based example:
+=======================
+
+var stud={
+	r.no:1001
+	name:"Hema",			//field:value
+	age:21,
+	website:"www.hema.com",
+	hobbies:["music","dancing", "cooking","reading"]
+}
+nested JSON:
+var emp:{
+	eno:1,
+	ename:'hema',
+	esal:20000.50,
+	desig:"student",
+	qual:"B.Sc cs",
+	prevemplocation;{city1:'Karur',city2:'trichy',city3:'covai'........}
+
+
+
+
+
+History of Mongodb
+===================
+Mongo was created by Eliot and Dwight n 2007,
+when they faced scalability issues
+ while working wht relational database.
+The orgsnization that developed MongoDB was orginally known as 10gen.
+In Feb 2009,they changed their bussiness model and released Mongodb as an open source project.
+The organizaton changed its name in 2013 and now known as MangoDB Inc.
+
+Features of Mongodb
+===================
+1) Mongodb provides high performance.
+Most of the operations n the mongodb are faster compared to relational databases.
+2)mongodb provides auto replicatoion feature that allows you to quickly recover data in case of a failure.
+3) Horizontal scaling is possible in mongodb because of sharing.sharding is partitioning of data and placing it on multiple machines in such a way that the order of the data is preserved

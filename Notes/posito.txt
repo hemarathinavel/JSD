@@ -1,0 +1,10 @@
+title:position
+
+
+type:
+	static---->default
+		*)seprate place
+		*)scrolling:yes
+		*)outside screen:yes
+	absolute
+	fixed
