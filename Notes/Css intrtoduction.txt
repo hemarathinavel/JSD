@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CSS Introduction:
 ----------------------
 CSS-Cascading Style Sheet
@@ -9,4 +10,17 @@ CSS-Cascading Style Sheet
 Types of css:
 	Inline in css-with in a tag
 	Internal css-head tag+whole single html program
+=======
+CSS Introduction:
+----------------------
+CSS-Cascading Style Sheet
+	
+	use:webpage excellent design in easy way
+	invented by:w3c company(World wide web consoritum)
+	year:1996(level 1 dec 17)
+	css created by Hakon Wium Lie and Bert Bos.
+Types of css:
+	Inline in css-with in a tag
+	Internal css-head tag+whole single html program
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 	External css-head tag+onr or more html programs

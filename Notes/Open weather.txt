@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Open Weather
 user name:Hema
 email:hema05r@gmail.com
@@ -5,4 +6,13 @@ password:hema258124
 Api keys:64e032b7d7092f93756812972850a40e
 API:https://api.openweatermap.org/data/2.5/weather?q=karur&appid=64e032b7d7092f93756812972850a40e
 what is the use of axios?
+=======
+Open Weather
+user name:Hema
+email:hema05r@gmail.com
+password:hema258124
+Api keys:64e032b7d7092f93756812972850a40e
+API:https://api.openweatermap.org/data/2.5/weather?q=karur&appid=64e032b7d7092f93756812972850a40e
+what is the use of axios?
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
  to maintain restful api's

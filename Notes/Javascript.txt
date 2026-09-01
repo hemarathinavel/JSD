@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Core programming Ideas
 =====================
 Logic:
@@ -23,4 +24,31 @@ What  is an Algorithm?
 	In programming,it tells the computer what to do and in what order
 	Analogy:Its like a recipe-clear steps from       to finish                                                                                
 
+=======
+Core programming Ideas
+=====================
+Logic:
+	Thinking through the steps
+Functions:
+	Reuasble blocks of code
+Reusable code
+	Write once,use often
+
+
+
+What  is BODMAS ?
+	BODMAS is a rule for the order in which maths operations happen
+It stands for
+	Brackets
+	Orders(powers or roots)
+	Division and Multplication(left to right)
+	Addition and subtraction(left to right)
+
+
+What  is an Algorithm?
+	An algorithm is a step by step  set of instructions to slove a problem or complete a task
+	In programming,it tells the computer what to do and in what order
+	Analogy:Its like a recipe-clear steps from       to finish                                                                                
+
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
                    

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 jason :
                 javascript object notation
  two types:
@@ -29,4 +30,37 @@ pupose:
 	no-sql
 	paragraph format
 	unstructure format
+=======
+jason :
+                javascript object notation
+ two types:
+	1) normalized jason
+	2)denormalized jason
+1)normalized
+	var stud={
+		rno:199001,
+		sname:Hema,
+		marks:100,
+		grade:"b"
+		result:"pass"
+		}
+2)denormalized
+	var stud={
+		rno:199001,
+		sname:Hema,
+		marks:{
+			tamil:100,
+			english:100,
+			maths:100,
+			science:100,
+			social science:100,
+			},
+			rank:1;
+pupose:
+	light-weight process
+	fast access
+	no-sql
+	paragraph format
+	unstructure format
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 			

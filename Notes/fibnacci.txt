@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 fibbonacci series:
 
 	input: 6
 	output: 0 1 1 2  3  5
 default :f3=f1+f2
  	f3=-1+1
+=======
+fibbonacci series:
+
+	input: 6
+	output: 0 1 1 2  3  5
+default :f3=f1+f2
+ 	f3=-1+1
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 if we add f1 and f2 we can get f3 value after that we have changed the value  f1 as f3 and f2 as f1 

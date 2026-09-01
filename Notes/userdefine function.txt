@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 prerequest to learn user defined functions or method:
 =============================================
 	()
@@ -7,4 +8,15 @@ prerequest to learn user defined functions or method:
 				calling function(variables/value)
 	void--> no return(don't use return keyword)
 	return--> return is must if don't use void
+=======
+prerequest to learn user defined functions or method:
+=============================================
+	()
+	calling function or method	zero to many times
+	called function or method	only one time
+	arguments or parameters	called function(datatype)
+				calling function(variables/value)
+	void--> no return(don't use return keyword)
+	return--> return is must if don't use void
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 	--->only mention at last line of called function

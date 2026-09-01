@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 while loop:
 =========
 	def: unfixed itertation with entry loop.
@@ -29,4 +30,37 @@ sum of odd number:4
 task2:
 	n=1593
 	output:
+=======
+while loop:
+=========
+	def: unfixed itertation with entry loop.
+syntax:
+	initial;
+	while
+	{
+		statement;------------------>s.o.p/if/break/continue
+		increment/decrement;------------------>++ -- *= += /= %=
+	}
+
+
+
+
+
+task:
+	n=12348
+display   even number:248
+display  odd number:13
+
+
+even number count:3
+odd number count :2
+
+
+sum of even number:14
+sum of odd number:4
+
+task2:
+	n=1593
+	output:
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 	3951(Single var)

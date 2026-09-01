@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Intro linux:
 	*) linux is a OS(operating system)
 	
@@ -23,4 +24,31 @@ git and github:
 	                       
 	github---------------------->website
 
+=======
+Intro linux:
+	*) linux is a OS(operating system)
+	
+	linux os advantages	
+	------------------------
+
+	*) high security
+	*)data safe
+	*)no need to anti virus
+	
+
+
+	disadvantages
+	------------------
+	*)work to hard
+
+
+
+
+git and github:
+------------------
+	git -------------------------->data storage local to cloud
+	                       
+	github---------------------->website
+
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 		

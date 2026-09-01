@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Escape sequence or format specifier:
 ___________________________________
 ___________________________________
@@ -20,4 +21,28 @@ class Sample
 {
   public static void main(String args[])
   {
+=======
+Escape sequence or format specifier:
+___________________________________
+___________________________________
+purpose:to  aligment puropose
+ 
+
+
+\n -cursor moves to bew line
+\t -tap space
+\b -backspace
+\0 -null char
+\r -over written
+\" -double quotes
+\' -single quotes
+\\ -single slash
+
+
+
+class Sample
+{
+  public static void main(String args[])
+  {
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
    System.out.println("Welcome to java");

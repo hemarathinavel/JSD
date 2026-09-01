@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 operator:
 1) arithmetic operator
   
@@ -22,4 +23,30 @@ note:don't use string when compare
     || logical or
        note: any one condition is true,the result will be true
     ! loggical not
+=======
+operator:
+1) arithmetic operator
+  
+
+      +
+      -
+      *
+      /
+      %
+2)relational operator or comparsion operator
+       <
+       <=
+       >
+       >=
+       ==
+       !=
+note:don't use string when compare
+
+3)logical operator
+    && logical and
+       note: any one condition is false,the result will be false
+    || logical or
+       note: any one condition is true,the result will be true
+    ! loggical not
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
       note: True means false ,False means true

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1)find the max value of an array
 2)sum of array
 3)sum of even numbers  in an array
@@ -34,4 +35,42 @@ ex:
 var disc=()=>{
 }
 tot=a+b+c;
+=======
+1)find the max value of an array
+2)sum of array
+3)sum of even numbers  in an array
+4)count the odd numbers n arrray
+
+
+nested loop
+--------------
+for(var i=1;i<=5;i++)
+	for(var j=1;j<=5;i++)
+	{
+	document.write(" "+i+j);
+	}
+	document.write("<br>");
+output:
+11  12 13 14 15
+21 22 23 24 25
+31 32 33 34 35
+41 42 43 44 45
+51 52 53 54 55
+
+normal function:
+==================
+function functionname()
+{
+..................................
+}
+
+arrow function:
+===================
+var/let/const function()=>{
+}
+ex:
+var disc=()=>{
+}
+tot=a+b+c;
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 alert(tot);

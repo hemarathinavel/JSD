@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 title:position
 
 
@@ -7,4 +8,15 @@ type:
 		*)scrolling:yes
 		*)outside screen:yes
 	absolute
+=======
+title:position
+
+
+type:
+	static---->default
+		*)seprate place
+		*)scrolling:yes
+		*)outside screen:yes
+	absolute
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 	fixed

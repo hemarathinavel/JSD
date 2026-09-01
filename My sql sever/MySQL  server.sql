@@ -1,0 +1,11 @@
+#create database jsd;
+use jsd;
+#create table student(rno int primary key,sname varchar(25),mark float);
+#insert into student values(1008,'yoga',33.5);
+#update student set sname='Hemalatha' where rno=1001;
+#alter table student  add result varchar(4);
+#update student set result='fail' where mark<50;
+#update student set result='pass' where mark>=50;
+#delete from student;
+delete from student where sname='yuva';
+select * from student;

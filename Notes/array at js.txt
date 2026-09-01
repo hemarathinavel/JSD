@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Array:
 	def: a set of value arranged in sequential of single name variable ia known as array.
 Array Syntax:
@@ -6,4 +7,14 @@ Array Syntax:
 	var variablename[]={value1,value2.....}
 array index always start from:0
 inbuild:
+=======
+Array:
+	def: a set of value arranged in sequential of single name variable ia known as array.
+Array Syntax:
+	Var variablename=new Array(size);
+Array Syntax:
+	var variablename[]={value1,value2.....}
+array index always start from:0
+inbuild:
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
 arrayvariablename.length

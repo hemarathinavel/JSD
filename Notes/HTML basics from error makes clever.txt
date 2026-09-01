@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 In html we use tags insead of coding
 first we use head tags
 in head tags we only six tags and we cant use seven tags
@@ -18,3 +19,25 @@ in html there are two types of list
 
 
 
+=======
+In html we use tags insead of coding
+first we use head tags
+in head tags we only six tags and we cant use seven tags
+<h1></h1> to <h6></h6>
+for paragragh we use p for  tags
+<p></p>
+<a href =""></a> for link
+<img src="" width=""> for insert image
+<br> is for break the line and go to next line
+<center> </center> is used for center the images
+in link we use inbetween the <a> </a> we have to give the name of the song or any other website also
+
+
+in html there are two types of list
+	order list <ol></ol>
+	unorder list<ul></ul>
+
+
+
+
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022

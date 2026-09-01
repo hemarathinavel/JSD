@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 table concept:
 in table we use rows and columns
 here we rows first and we used column inside the rows 
@@ -5,3 +6,12 @@ row tag<tr></tr>
 column tag<td></td>
  in column the td  we use as data
 in table we use border at table tag for creating a box
+=======
+table concept:
+in table we use rows and columns
+here we rows first and we used column inside the rows 
+row tag<tr></tr>
+column tag<td></td>
+ in column the td  we use as data
+in table we use border at table tag for creating a box
+>>>>>>> e8364c1652cd4e53361f10813c5d48b3762e3022
