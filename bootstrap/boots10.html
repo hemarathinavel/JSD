@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #menu #menuitem
+        {
+            display: block;
+        }
+        a
+        {
+            text-decoration: none;
+            padding: 5px;
+            color: red;
+            background-color: skyblue;
+        }
+        #dropdown
+        {
+            display: inline-block;
+        }
+        #menu
+        {
+            display: none;
+        }
+        #dropdown:hover #menu
+        {
+            display: block;
+        }
+        #but1
+        {
+            cursor: pointer;
+            border: 5px solid pink;
+            background-color: purple;
+            border-radius: 10px;
+            font-size: 25px;
+            box-shadow: 5px 5px 10px 2px greenyellow;
+        }
+        #but1:hover
+        {
+            background-color: blueviolet;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+        #menuitem:hover
+        {
+            color: pink;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Dropdown without Bootstrap</center></h1>
+    <div id="dropdown">
+        <button id="but1">Dropdown menu</button>
+        <div id="menu">
+            <a id="menuitem" href="#">Home</a>
+            <a id="menuitem" href="#">Acdameic</a>
+            <a id="menuitem" href="#">Admission</a>
+            <a id="menuitem" href="#">FeesCollection</a>
+            <a id="menuitem" href="#">Help</a>
+
+        </div>
+    </div>
+</body>
+</html>
