@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Master Notes - Topper Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --red-marker: #d32f2f;
+            --blue-gel: #1565c0;
+            --yellow-hl: rgba(255, 235, 59, 0.6);
+            --green-ink: #2e7d32;
+            --pencil: #555555;
+            --paper-bg: #ffffff;
+            --page-width: 210mm;
+            --page-height: 297mm;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e5ec;
+            font-family: 'Nunito', sans-serif;
+            color: var(--blue-gel);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* A4 Page Setup */
+        .page {
+            background-color: var(--paper-bg);
+            width: var(--page-width);
+            min-height: var(--page-height);
+            margin: 20px auto;
+            padding: 20mm;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        /* Typography & Color Coding */
+        h1, h2, h3, h4, .red-marker {
+            color: var(--red-marker);
+            font-family: 'Caveat', cursive;
+            margin-top: 0.5em;
+            margin-bottom: 0.3em;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 3.5rem; text-align: center; border-bottom: 3px solid var(--red-marker); padding-bottom: 10px; margin-top: 0;}
+        h2 { font-size: 2.2rem; border-bottom: 2px dashed var(--red-marker); display: inline-block; }
+        h3 { font-size: 1.8rem; margin-top: 1.2em; color: #b71c1c; }
+        
+        .blue-gel { color: var(--blue-gel); }
+        
+        .yellow-hl {
+            background: linear-gradient(104deg, rgba(255,235,59,0) 0.9%, rgba(255,235,59,0.8) 2.4%, rgba(255,230,0,0.6) 5.8%, rgba(255,235,59,0.9) 93%, rgba(255,235,59,0.7) 96%, rgba(255,235,59,0) 98%);
+            padding: 0 4px;
+            color: #000;
+            font-weight: bold;
+            border-radius: 3px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .green-ink {
+            color: var(--green-ink);
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        /* Pencil Sketch Layouts */
+        .pencil-sketch {
+            border: 2px solid var(--pencil);
+            border-radius: 10px 255px 15px 225px / 255px 15px 225px 15px;
+            padding: 15px;
+            background: #fafafa;
+            font-family: 'Caveat', cursive;
+            color: var(--pencil);
+            font-size: 1.2rem;
+            margin: 15px 0;
+            box-shadow: 2px 3px 0px rgba(0,0,0,0.1);
+            transform: rotate(-0.2deg);
+        }
+
+        .code-block {
+            font-family: 'Fira Code', monospace;
+            background-color: #f8f9fa;
+            color: var(--green-ink);
+            padding: 15px;
+            border-left: 4px solid var(--green-ink);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            margin: 10px 0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        .code-block .key { color: var(--red-marker); font-weight: bold; }
+        .code-block .string { color: #0277bd; }
+        .code-block .func { color: #6a1b9a; font-weight: bold; }
+
+        /* Flowcharts & Mind Maps */
+        .flowchart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .flow-box {
+            border: 2px solid var(--pencil);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            color: var(--pencil);
+            background: #fff;
+            text-align: center;
+        }
+        .flow-arrow { color: var(--pencil); font-weight: bold; font-size: 1.5rem; }
+
+        /* Structure & Hierarchy */
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        ul li::before {
+            content: '👉';
+            position: absolute;
+            left: -25px;
+            top: 2px;
+            font-size: 0.9rem;
+        }
+
+        .indent { padding-left: 20px; border-left: 2px dotted var(--blue-gel); margin-left: 10px; margin-top: 5px;}
+
+        /* Learning Enhancers */
+        .box {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background: #fff;
+            position: relative;
+        }
+
+        .revision-box {
+            border: 3px solid var(--blue-gel);
+            box-shadow: 4px 4px 0 var(--blue-gel);
+            background: #e3f2fd;
+        }
+        .revision-box::before {
+            content: '🧠 Quick Revision';
+            position: absolute;
+            top: -12px; left: 15px;
+            background: var(--blue-gel); color: #fff;
+            padding: 2px 10px; font-weight: bold; font-size: 0.9rem; border-radius: 4px;
+        }
+
+        .trick-box {
+            border: 3px solid var(--green-ink);
+            background-color: #e8f5e9;
+            box-shadow: 4px 4px 0 var(--green-ink);
+        }
+        .trick-box::before {
+            content: '💡 Memory Trick';
+            position: absolute;
+            top: -12px; left: 15px;
+            background: var(--green-ink); color: #fff;
+            padding: 2px 10px; font-weight: bold; font-size: 0.9rem; border-radius: 4px;
+        }
+        
+        .exam-tip {
+            border: 3px solid var(--red-marker);
+            background-color: #ffebee;
+            box-shadow: 4px 4px 0 var(--red-marker);
+        }
+        .exam-tip::before {
+            content: '🎯 Exam Tip';
+            position: absolute;
+            top: -12px; left: 15px;
+            background: var(--red-marker); color: #fff;
+            padding: 2px 10px; font-weight: bold; font-size: 0.9rem; border-radius: 4px;
+        }
+        
+        .formula-box {
+            border: 3px solid #fbc02d;
+            background-color: #fffde7;
+            box-shadow: 4px 4px 0 #fbc02d;
+        }
+        .formula-box::before {
+            content: '⚙️ Syntax / Command Box';
+            position: absolute;
+            top: -12px; left: 15px;
+            background: #fbc02d; color: #000;
+            padding: 2px 10px; font-weight: bold; font-size: 0.9rem; border-radius: 4px;
+        }
+
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid var(--blue-gel);
+            padding: 10px;
+            text-align: left;
+        }
+        th { background-color: rgba(21, 101, 192, 0.1); color: var(--red-marker); font-family: 'Caveat', cursive; font-size: 1.5rem;}
+
+        /* Print CSS */
+        @media print {
+            body { background: none; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; padding: 15mm; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: Intro, History, JSON Structure -->
+    <div class="page">
+        <h1>📓 MongoDB Master Notes</h1>
+        <div style="text-align: center; margin-top: -15px;">
+            <span class="yellow-hl">Zero-to-Hero: NoSQL DB Core Concepts & Advanced Features</span>
+        </div>
+
+        <h2>Chapter 1: Introduction to MongoDB 🍃</h2>
+        
+        <h3>1. What is MongoDB?</h3>
+        <ul>
+            <li>It is an <span class="yellow-hl">open-source</span>, <span class="yellow-hl">document-oriented</span> database.</li>
+            <li>Instead of tables (like traditional SQL), it stores data in a <span class="red-marker">paragraph/document format</span>.</li>
+            <li>Data is strictly stored in the form of <span class="red-marker">Key & Value Pairs</span> (BSON/JSON-like structure).</li>
+        </ul>
+
+        <h3>2. History & Timeline ⏳</h3>
+        <div class="pencil-sketch flowchart">
+            <span class="flow-box"><strong><span class="yellow-hl">2007</span></strong><br><span style="font-size:1rem;">Created by Eliot & Dwight</span></span> 
+            <span class="flow-arrow">→</span> 
+            <span class="flow-box" style="border-color:var(--red-marker); color:var(--red-marker);"><strong>The Problem</strong><br><span style="font-size:1rem;">Scalability issues in Relational DBs</span></span>
+            <span class="flow-arrow">→</span> 
+            <span class="flow-box"><strong><span class="yellow-hl">2013</span></strong><br><span style="font-size:1rem;">Renamed to MongoDB Inc.</span></span>
+        </div>
+
+        <h2>Chapter 2: Data Structure (Documents) 📦</h2>
+        <p>MongoDB entirely abandons rigid rows and columns. It uses a <strong>JSON-like nested structure</strong> to group related data. This means a single record can hold complex data types like arrays and nested objects.</p>
+
+        <h3>1. Standard Document Example</h3>
+        <p class="green-ink">Below is an example of a student document storing varied data types (Strings, Numbers, Arrays/Sets):</p>
+        <div class="code-block">
+var stud = {
+  <span class="key">rno</span> : 1001,
+  <span class="key">name</span> : <span class="string">"Nisanth"</span>,
+  <span class="key">age</span> : 21,
+  <span class="key">website</span> : <span class="string">"www.Nisanth.com"</span>,
+  <span class="key">hobbies</span> : [<span class="string">"Cooking"</span>, <span class="string">"Volleyball"</span>]
+}
+        </div>
+
+        <h3>2. Employee Details (Nested JSON format)</h3>
+        <p class="green-ink">A similar Key-Value structure applied to employee records:</p>
+        <div class="code-block">
+var emp = {
+  <span class="key">eno</span> : 1,
+  <span class="key">ename</span> : <span class="string">"Nisanth"</span>,
+  <span class="key">esal</span> : 28800.05,
+  <span class="key">designation</span> : <span class="string">"trainer"</span>,
+  <span class="key">qualification</span> : <span class="string">"MCA"</span>
+}
+        </div>
+        
+        <div class="exam-tip box">
+            Whenever asked to define MongoDB's internal structure, always explicitly write: <br>
+            <span class="red-marker">"Data is stored in the form of Key and Value pairs (BSON Format)."</span>
+        </div>
+
+    </div>
+
+    <!-- PAGE 2: SQL Bridge & Features -->
+    <div class="page">
+        <h2>Chapter 3: The Beginner's Bridge (SQL vs MongoDB) 🌉</h2>
+        <p>If you are learning MongoDB for the first time, you must understand how traditional SQL terms map to NoSQL MongoDB terms.</p>
+
+        <table class="table-container">
+            <tr>
+                <th>SQL (Relational DB)</th>
+                <th>MongoDB (NoSQL)</th>
+                <th>Explanation (Blue Pen)</th>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td><strong>Database</strong></td>
+                <td>The outer container for the data. (Same term)</td>
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td><strong class="red-marker">Collection</strong></td>
+                <td>Instead of a Table of rows, it's a Collection of documents.</td>
+            </tr>
+            <tr>
+                <td>Row</td>
+                <td><strong class="red-marker">Document</strong></td>
+                <td>A single record (The JSON object we saw in Chapter 2).</td>
+            </tr>
+            <tr>
+                <td>Column</td>
+                <td><strong class="red-marker">Field</strong></td>
+                <td>The "Key" in the key-value pair.</td>
+            </tr>
+        </table>
+
+        <h2>Chapter 4: Core Features of MongoDB ⚡</h2>
+        <p>MongoDB solves the limitations of traditional relational databases through three primary features:</p>
+
+        <ul>
+            <li>
+                <span class="red-marker" style="font-size: 1.3rem;">1. High Performance</span>
+                <div class="indent">Most operations in MongoDB are significantly faster compared to relational databases because data is pre-grouped in documents rather than scattered across normalized tables (no complex JOINs needed).</div>
+            </li>
+            <li>
+                <span class="red-marker" style="font-size: 1.3rem;">2. Auto-Replication</span>
+                <div class="indent">Provides automatic redundancy (Replica Sets). This allows you to <span class="yellow-hl">quickly recover data</span> in case of a server or hardware failure, ensuring High Availability.</div>
+            </li>
+            <li>
+                <span class="red-marker" style="font-size: 1.3rem;">3. Horizontal Scaling (Sharding)</span>
+                <div class="indent">
+                    <span class="yellow-hl">Sharing (Sharding)</span> is the partitioning of data and placing it on multiple machines. 
+                    <br><strong>Crucial point:</strong> It distributes massive datasets in such a way that the <em>order of the data is preserved</em>.
+                </div>
+            </li>
+        </ul>
+
+        <div class="pencil-sketch" style="text-align: center;">
+            <strong>Mind Map: Horizontal Scaling (Sharding)</strong><br>
+            <span style="font-size: 0.9rem;">(Splitting a massive 3TB database across multiple cheap servers)</span><br><br>
+            [ Massive Dataset (A-Z) ]<br>
+            ⬇️<br>
+            [ Shard 1 (A-H) ] &nbsp;〰️&nbsp; [ Shard 2 (I-P) ] &nbsp;〰️&nbsp; [ Shard 3 (Q-Z) ]
+        </div>
+
+        <div class="trick-box box">
+            How to remember the 3 core features for the exam? Remember the acronym <strong style="font-size: 1.3rem;">P.A.H.</strong><br>
+            <strong>P</strong>erformance (High)<br>
+            <strong>A</strong>uto-Replication<br>
+            <strong>H</strong>orizontal Scaling (via Sharding)
+        </div>
+    </div>
+
+    <!-- PAGE 3: CRUD Operations (Scratch to Advance) -->
+    <div class="page">
+        <h2>Chapter 5: Practical Commands (CRUD) 💻</h2>
+        <p>To go from scratch to advanced, you must master how to interact with the data. <strong>CRUD</strong> stands for Create, Read, Update, and Delete.</p>
+
+        <div class="formula-box box">
+            <strong>The Global Syntax:</strong><br>
+            <span class="green-ink" style="font-family: monospace;">db.&lt;collection_name&gt;.&lt;operation&gt;({conditions})</span>
+        </div>
+
+        <h3>1. Create (Inserting Data)</h3>
+        <ul>
+            <li>Used to add new documents into a collection.</li>
+            <li><span class="red-marker">Command:</span> <code>insertOne()</code> or <code>insertMany()</code></li>
+        </ul>
+        <div class="code-block">
+<span class="comment">// Creating a new employee record inside the "employees" collection</span>
+db.employees.<span class="func">insertOne</span>({
+    <span class="key">ename</span>: <span class="string">"Nisanth"</span>,
+    <span class="key">designation</span>: <span class="string">"Trainer"</span>
+})
+        </div>
+
+        <h3>2. Read (Querying Data)</h3>
+        <ul>
+            <li>Used to fetch and view data. Equivalent to SQL's <code>SELECT * FROM</code>.</li>
+            <li><span class="red-marker">Command:</span> <code>find()</code></li>
+        </ul>
+        <div class="code-block">
+<span class="comment">// View all employees</span>
+db.employees.<span class="func">find</span>()
+
+<span class="comment">// View only employees where designation is "Trainer"</span>
+db.employees.<span class="func">find</span>({ <span class="key">designation</span>: <span class="string">"Trainer"</span> })
+        </div>
+
+        <h3>3. Update (Modifying Data)</h3>
+        <ul>
+            <li>Used to change existing data. You must use the <code>$set</code> operator!</li>
+            <li><span class="red-marker">Command:</span> <code>updateOne()</code></li>
+        </ul>
+        <div class="code-block">
+<span class="comment">// Find Nisanth, and update his salary to 35000</span>
+db.employees.<span class="func">updateOne</span>(
+    { <span class="key">ename</span>: <span class="string">"Nisanth"</span> },            <span class="comment">// 1. Filter: Who to update?</span>
+    { $set: { <span class="key">esal</span>: 35000 } }       <span class="comment">// 2. Action: What to change?</span>
+)
+        </div>
+
+        <h3>4. Delete (Removing Data)</h3>
+        <ul>
+            <li>Used to permanently remove a document.</li>
+            <li><span class="red-marker">Command:</span> <code>deleteOne()</code></li>
+        </ul>
+        <div class="code-block">
+<span class="comment">// Delete the employee named Nisanth</span>
+db.employees.<span class="func">deleteOne</span>({ <span class="key">ename</span>: <span class="string">"Nisanth"</span> })
+        </div>
+
+        <div class="revision-box box">
+            <strong>⚠️ Common Mistake Alert:</strong><br>
+            When updating a document, beginners often forget the <code>$set</code> keyword. If you omit <code>$set</code>, MongoDB might replace the <em>entire document</em> instead of just updating the specific field!
+        </div>
+
+    </div>
+
+    <!-- PAGE 4: Self Test Quiz -->
+    <div class="page">
+        <h2 style="text-align: center; border-bottom: none;">📚 Final Knowledge Check</h2>
+        <hr style="border-top: 2px dashed var(--blue-gel); margin: 10px 0 30px 0;">
+
+        <!-- Self Test Quiz -->
+        <div class="box" style="border: 2px solid #000; background: #fff;">
+            <h3 style="margin-top: 0; color: #000; text-align: center;">🎯 Self-Test Quiz</h3>
+            
+            <strong>Multiple Choice Questions</strong>
+            <ol>
+                <li>MongoDB is an example of what kind of database? <br> a) Relational DB &nbsp;&nbsp; b) Document-oriented NoSQL &nbsp;&nbsp; c) Graph DB</li>
+                <li>In MongoDB terminology, what is a SQL "Table" called? <br> a) Document &nbsp;&nbsp; b) Collection &nbsp;&nbsp; c) Database</li>
+                <li>Who created MongoDB in 2007? <br> a) Eliot & Dwight &nbsp;&nbsp; b) Larry & Sergey &nbsp;&nbsp; c) Bill Gates</li>
+                <li>The process of partitioning data across multiple machines for scaling is called: <br> a) Replication &nbsp;&nbsp; b) Normalization &nbsp;&nbsp; c) Sharing (Sharding)</li>
+                <li>Which command is used to read/fetch data from a collection? <br> a) <code>db.fetch()</code> &nbsp;&nbsp; b) <code>db.get()</code> &nbsp;&nbsp; c) <code>db.collection.find()</code></li>
+            </ol>
+
+            <strong>Short Answer</strong>
+            <ol start="6">
+                <li>Why did Eliot and Dwight create MongoDB? (What issue were they facing?)</li>
+                <li>What is the primary benefit of Auto-replication in MongoDB?</li>
+                <li>Write the syntax to insert a document with the key "name" and value "John" into a collection called "users".</li>
+            </ol>
+
+            <div style="font-size: 0.95em; margin-top: 30px; border-top: 1px solid #ccc; padding-top: 15px; font-family: 'Caveat', cursive; color: var(--green-ink);">
+                <strong style="color: var(--red-marker);">Answer Key:</strong><br>
+                1. <strong>b</strong> (Document-oriented NoSQL)<br>
+                2. <strong>b</strong> (Collection)<br>
+                3. <strong>a</strong> (Eliot & Dwight)<br>
+                4. <strong>c</strong> (Sharing / Sharding)<br>
+                5. <strong>c</strong> (db.collection.find())<br><br>
+                6. They faced <strong>scalability issues</strong> while working with traditional relational databases.<br>
+                7. It allows you to <strong>quickly recover data</strong> in case of a hardware/system failure (redundancy).<br>
+                8. <code>db.users.insertOne({ name: "John" })</code>
+            </div>
+        </div>
+
+        <div class="pencil-sketch" style="text-align: center; margin-top: 50px;">
+            <span style="font-size: 1.5rem; color: var(--red-marker);">🏆 You've completed the MongoDB Master Notes!</span><br>
+            <span class="blue-gel">"Repetition is the mother of learning." - Scan these notes one more time before your exam!</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
