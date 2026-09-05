@@ -1,0 +1,21 @@
+Express js:
+-------------
+	It is a backend
+	def : runtime or from dynamic backend environment.
+	menaing:to get value enduser.
+
+	application:html/reactjs from(inputs)
+
+
+installation:
+==========
+	d:/project folder>npm install express
+
+two methods in expressjs:
+======================
+	1)get method(default)
+	use: it will show all the form input values in URL
+	
+	2)post method
+	use: it won't show all the form input values in URL(high security -must know about body-parser)
+
