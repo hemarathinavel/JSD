@@ -1,0 +1,13 @@
+how to access linux system?
+	www.puuty download 
+	install  the putty
+Network-> nat to host only adapter and save
+
+
+ip a
+ip addr
+ifconfiig
+
+
+	
+  
