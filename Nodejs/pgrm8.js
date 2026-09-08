@@ -1,0 +1,5 @@
+buf=new Buffer.from("I am Hemalatha from Karur")
+console.log(buf)
+console.log(buf.toString())
+buf.write("Sebastian",5)
+console.log(buf.toString())    
