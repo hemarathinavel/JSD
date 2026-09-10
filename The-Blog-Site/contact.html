@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TechSphere</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
 </head>
 
 <body>
@@ -29,6 +30,24 @@
 
         <p>Alternative Email: teamtech@example.com</p>
         <p>Phone: +91 91234 56789</p>
+
+        <div id="alertPlaceholder"></div>
+
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput"
+                    placeholder="you@example.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="messageInput" class="form-label">Message</label>
+                <textarea class="form-control" id="messageInput" rows="5"
+                    placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
     </main>
 
     <footer>
@@ -36,6 +55,29 @@
         <p>Authors: Nisanth, Team Member 2, Team Member 3, Team Member 4</p>
         <p>Email: techsphere@example.com</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const alertPlaceholder = document.getElementById('alertPlaceholder');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-success alert-dismissible fade show';
+            alert.setAttribute('role', 'alert');
+            alert.innerHTML = `
+                Your message was sent!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+
+            alertPlaceholder.innerHTML = '';
+            alertPlaceholder.appendChild(alert);
+
+            form.reset();
+        });
+    </script>
 
 </body>
 </html>

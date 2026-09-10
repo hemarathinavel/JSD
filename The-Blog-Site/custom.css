@@ -1,0 +1,42 @@
+/* custom.css — small overrides on top of Bootstrap, keeping the original palette */
+
+:root {
+    --bs-dark: #222;
+    --bs-dark-rgb: 34, 34, 34;
+
+    --bs-primary: #333;
+    --bs-primary-rgb: 51, 51, 51;
+
+    --bs-body-bg: #f4f4f4;
+    --bs-body-color: #333;
+
+    --bs-body-font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: var(--bs-body-font-family);
+}
+
+/* keep the sticky navbar behaviour from the original */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* card look closer to the original .blog-card style */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card img {
+    border-radius: 8px 8px 0 0;
+}
