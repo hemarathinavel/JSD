@@ -18,8 +18,10 @@ public class Letter{
         if(found==false){
             System.out.println("Not Found");
         }
+        scan.close();
     }
 
 }
+
     
 
