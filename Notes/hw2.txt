@@ -1,0 +1,11 @@
+class members:
+1) rno  int
+2)sname String
+3) gender char  (m,f)
+4)mark float
+5) ismarried boolean(true,false)
+=============================================
+1)get n number ofstudents
+2)count total no.of female students ex:7
+3)display centum students list
+4)dsplay nly married students rno and sname.

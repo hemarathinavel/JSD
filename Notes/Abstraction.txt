@@ -1,0 +1,49 @@
+What is abstraction in java?
+ only showing essential or important information,hiding,internal details.
+
+real time example
+driver:driver knowing only how to apply break,horn,accelerators and so on......
+==================================================
+what is encapsulation in java
+wraping of data.
+technicalclass(var+methods)
+real time examples
+ex:tube tablet
+==================================================
+access specifier:
+private----------------->
+public-------------------->
+protected---------------->
+default--------------------->
+==================================================
+		pack1                       pack2
+	base 	derive	main	base	derive
+private	yes	no	no	no	no
+public	yes	yes	yes	yes	yes
+protected	yes	yes	yes	no	yes
+default	yes	yes	yes	no	no
+==================================================
+Exception Handling:
+def:To avoid runtime or dynamic error
+
+types:
+1)cheated exceptions(Compile time)
+2)unchecked exceptions(run time)
+
+
+inbulit Exception:
+	-ArithmeticException(0/0 any/0)
+	-InputMismatchException(wrong input format)
+	-ArrayIndexOutOfBoundsException(out of range)
+	-NegativeArraySizeException(we can't decalare
+	-File not found exception
+cusrom or userfined exception:
+	Ageexception
+	nameexception
+	passwordexception
+Syntax:
+	try
+	{
+		//write java code
+	}
+catch

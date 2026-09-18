@@ -1,0 +1,26 @@
+.App {
+  width: 450px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+input {
+  width: 80%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+input:focus {
+  outline: 2px solid #555;
+}

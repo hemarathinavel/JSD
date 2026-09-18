@@ -1,0 +1,15 @@
+constructor:
+===============
+	constructor is a special member method.it is used to initialize object values.
+
+Types of constructor:
+	1)default constructor or null consstructor
+	2)argument or parametarized constructor
+	3)copy constructor
+	4)overloading constructor
+rules of constructor:
+=================
+	*)class name and constructor name should be equal
+	*)constructor should not be private access
+	*)constructor has no return type(ie.dont use void)
+	*)constructor called at the time of object creation.
