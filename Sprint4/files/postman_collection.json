@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "Task Manager API - Sprint 4",
+    "description": "Success and error cases for GET, POST, PUT, DELETE on /api/tasks",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080/api/tasks" },
+    { "key": "taskId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "GET all tasks",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}"
+      }
+    },
+    {
+      "name": "GET task by id (success)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/{{taskId}}"
+      }
+    },
+    {
+      "name": "GET task by id (not found -> 404)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/999999"
+      }
+    },
+    {
+      "name": "POST create task (success -> 201)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Write tests\",\n  \"description\": \"Cover the Task API\",\n  \"assignedTo\": \"Hema\",\n  \"dueDate\": \"2026-10-10\",\n  \"status\": \"TODO\"\n}"
+        }
+      }
+    },
+    {
+      "name": "POST create task (blank name -> 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"\",\n  \"description\": \"Missing name\",\n  \"assignedTo\": \"Hema\",\n  \"dueDate\": \"2026-10-10\",\n  \"status\": \"TODO\"\n}"
+        }
+      }
+    },
+    {
+      "name": "POST create task (bad JSON -> 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{ this is not valid json "
+        }
+      }
+    },
+    {
+      "name": "PUT update task (success -> 200)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/{{taskId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Write tests (updated)\",\n  \"description\": \"Cover the Task API\",\n  \"assignedTo\": \"Priya\",\n  \"dueDate\": \"2026-10-15\",\n  \"status\": \"DONE\"\n}"
+        }
+      }
+    },
+    {
+      "name": "PUT update task (not found -> 404)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/999999",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Doesn't exist\",\n  \"description\": \"d\",\n  \"assignedTo\": \"x\",\n  \"dueDate\": \"2026-10-15\",\n  \"status\": \"DONE\"\n}"
+        }
+      }
+    },
+    {
+      "name": "DELETE task (success -> 204)",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/{{taskId}}"
+      }
+    },
+    {
+      "name": "DELETE task (not found -> 404)",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/999999"
+      }
+    }
+  ]
+}
