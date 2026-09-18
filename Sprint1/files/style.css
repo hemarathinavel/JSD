@@ -1,0 +1,187 @@
+:root {
+  --color-bg: #f6f6f3;
+  --color-surface: #ffffff;
+  --color-text: #1f2430;
+  --color-text-muted: #667085;
+  --color-border: #e4e2dc;
+  --color-accent: #4c5fd5;
+  --color-accent-dark: #3a49ab;
+
+  --status-todo: #64748b;
+  --status-progress: #4c5fd5;
+  --status-review: #b45309;
+  --status-done: #15803d;
+
+  --status-todo-bg: #eef1f5;
+  --status-progress-bg: #eaecfb;
+  --status-review-bg: #fdf1e0;
+  --status-done-bg: #e6f4ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ---- Header ---- */
+
+.board-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.board-header__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.board-header__subtitle {
+  color: var(--color-text-muted);
+  max-width: 42ch;
+  margin-bottom: 0;
+}
+
+.board-main {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+/* ---- Form card ---- */
+
+.task-form-card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: none;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  border-color: var(--color-border);
+  padding: 0.55rem 0.75rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(76, 95, 213, 0.15);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+/* ---- Task list ---- */
+
+.task-list {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.task-list__item {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.task-card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: none;
+  width: 100%;
+}
+
+.task-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.task-card__status {
+  font-weight: 600;
+  font-size: 0.7rem;
+  padding: 0.35em 0.65em;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.task-card__status--todo {
+  color: var(--status-todo);
+  background-color: var(--status-todo-bg);
+}
+
+.task-card__status--in-progress {
+  color: var(--status-progress);
+  background-color: var(--status-progress-bg);
+}
+
+.task-card__status--review {
+  color: var(--status-review);
+  background-color: var(--status-review-bg);
+}
+
+.task-card__status--done {
+  color: var(--status-done);
+  background-color: var(--status-done-bg);
+}
+
+.task-card__description {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.6rem;
+}
+
+.task-card__assigned::before {
+  content: "Assigned to ";
+}
+
+.task-card__due::before {
+  content: "Due ";
+}
