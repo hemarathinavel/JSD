@@ -1,0 +1,9 @@
+@SpringBootApplication-------->Main Application File-------->Start point
+			contains:
+			----->SpringBootConfiguration
+			----->EnableAutoConfiguration
+			----->ComponentScan
+@RestController------------------>showing output
+			contains:
+			---------->Controller----------->request handle purpose
+			----------->ResponseBody----->Send your data into htttp response data

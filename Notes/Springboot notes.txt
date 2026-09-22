@@ -1,0 +1,34 @@
+What is springboot?
+spring boot provides a good platform for java developers to develop a stand-alone and production-grade spring application that you can just run.
+
+It is a open source
+Development year:2013
+
+
+Adavntages of Spring boot:
+	Easy to understand and develop spring applications
+	Increase productivity
+	Reduces the development time
+Spring boot features
+Goals
+	Spring boot is designed with the following goals:
+		To avoid complex XML configuration inSpring
+		To develop a production ready Spring applicatons in an easier way
+		To reduce the development time and run the  application independently
+		Offer an easier way of getting started with the application
+Why Spring Boot?
+	You can choose Spring Boot because of the feature and benefits it offers as given here:
+		It provides a flexible way to configure Java Beans,XML configurations,and Database Transactions
+		It proviedes  a powerful  batch processing and manages REST endpoints
+		In spring boot,everything is auto configured;no manual configurations are needed
+		It offers annotation based spring application
+		Easy dependency management
+		It includes Embedded Servlet Container
+How does it work?
+
+
+	Spring Boot automatically configures your application based on the dependencies you have added to the project by using @EnableAutoConfguration annotation
+	For example,
+		if mysql database is on your classpath,but you have not configured any database connection,then Spring Boot auto configures in memory database.
+		the entry point of the spring boot applcation is the class contains @Springboot application annotation and main method.
+		spring boot automatically scans all components included in the projecct by using @ComponentScan annotation
