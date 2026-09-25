@@ -1,0 +1,32 @@
+What is MVC?
+	The spring boot framework leverages the modal-viewcontroller(MVC) architectural pattern to sstructure web applications,promoting a clear sepration of concerns.
+
+1)Model:
+	The model represents the appliccations data and business logic
+	It interacts  with the data source(e.g., database) to retrieve,store,and manipulate data.
+	In  a spring boot application,the often involves entities,reporsitories(for data access),and service classes(for business logic).
+
+2)View:(front end it can be visible)
+	The view is responsible for presenting the data to the user
+	It renders the user interface based on the data provided by the model. 
+	Common view technologies in spring boot include.Thymeleaf,JSP,or even returning JSON/XML for RESTful APIs.
+
+3)Controller:
+	The controller act as an intermediary between the model and the view
+	It rececives user requests,processes them,interacts with the model to fetch or update data,and them select appropriate view to displaythe result
+	In spring boot controllers are typically JAva classed annotated @Controller or @RestController(for RESTful services).
+
+This structure ensures that the presentation logic(
+view),business logic(Model), and request handling (Controller) are distinct,making the application more modular,maintainable,and scalable.
+
+Flow inMVC
+	1)User interacts with the view(e.g submits a form)
+	2)Controller recevies the user's action
+	3)Controller interacts with the model if necessary(e.g to save data)
+	4)Controller selects and updates the appropriate view
+	5)Updated View is presented to user
+Benefits of MVC
+	Sepration of concerns:Each component has a specific role,making the application easier to develop and maintain.
+	Modularity:Components can be developed and tested independentlly
+	Flexibility:Easy to modify or replace individual components without affecting the entrie system
+	Resusability:Models can be reused accross different interface s.

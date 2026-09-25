@@ -1,0 +1,27 @@
+Springboot view concept from MVC:
+===============================
+step1:
+	insall thymeleaf(purpose--> implement.html file)
+	pom.xml(project object model---->use-->maintain dependencies)
+	======
+	<dependency>
+	<groupID)org.springframework.boot</groupId>
+	<artifactid>spring-boot-starter-thumeleaf</artifactid>
+	</dependency>
+	ctrl+s(save)-->it will install automattically
+step2:
+	add html file:
+	===========
+		src.main.resources------>templates folder ---- ----> right click
+		----->new--->html.file
+		file name:index.html
+html file should be this format:
+=========================
+<!DOCUMENT html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>insert title here</title>
+</head>
+<body>
+
