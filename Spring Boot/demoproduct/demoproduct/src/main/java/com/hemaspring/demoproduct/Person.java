@@ -13,8 +13,14 @@ public Person(String sname,int age) {
 public String getSname() {
 	return sname;
 	
+} 
+public void setsname(String sname) {
+	this.sname=sname;
 }
 public int getAge() {
 	return age;
+}
+public void setage(int age) {
+	this.age=age;
 }
 }

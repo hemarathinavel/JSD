@@ -1,0 +1,3 @@
+package com.genchat.controller;
+import com.genchat.model.Message; import com.genchat.service.MessageService; import org.junit.jupiter.api.Test; import org.springframework.security.core.Authentication; import java.util.List; import static org.junit.jupiter.api.Assertions.*; import static org.mockito.Mockito.*;
+class MessageControllerTest { @Test void sendsAuthenticatedMessage(){MessageService s=mock(MessageService.class); Authentication a=mock(Authentication.class); when(a.getName()).thenReturn("hema"); Message m=new Message("hema","Hello"); when(s.send("hema","Hello")).thenReturn(m); MessageController c=new MessageController(s); assertEquals("hema",c.send(new com.genchat.dto.MessageRequest("Hello"),a).getBody().getSender());} }

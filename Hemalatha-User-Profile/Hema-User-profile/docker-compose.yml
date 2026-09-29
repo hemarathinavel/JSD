@@ -1,0 +1,9 @@
+services:
+  genchat:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - genchat-data:/app/data
+volumes:
+  genchat-data:

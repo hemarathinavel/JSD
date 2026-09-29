@@ -1,0 +1,92 @@
+how to add jsp file in springboot?
+==================================
+
+prerequest:
+	
+	do not add thymeleaf in pom.xml 
+
+	comment line:
+	<!--
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			</dependency>
+	-->
+
+step 1: add dependencies in pom.xml
+====================================
+
+<packaging>war</packaging>
+<dependencies>
+	
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
+</dependency>
+.....
+</dependencies>
+	
+step 2: (create folders for adding jsp file)
+=======
+pre request: do not add jsp files in templates folder
+  	     template folder only allows thymeleaf html file
+
+	src/main-------> webapp (create folder- small lettes)
+	src/main/webapp------> WEB-INF(create folder - caps letters)
+	src/main/webapp/WEB-INF------> jsp(create folder- small letters)
+
+	add jsp file in jsp folder
+
+ex: mypgm.jsp
+=============
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>welcome to jsp</h1>
+</body>
+</html>
+
+
+step 3: (controller program)
+============================
+src/main/java ------>PeopleController:
+
+ex:
+@Controller
+public class PeopleController {
+	@GetMapping("/api/v4")
+	public String jspmethod(Model model)
+	{
+		return "mypgm";
+	}
+}
+step 4: (application.properties)
+================================
+
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+
+step 5: (run)
+open browswer: http://localhost:8080/api/v4

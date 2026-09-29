@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>ThymeLeaf Loop-th:item</h1>
+<table border="4" align="center">
+<tr>
+	<th>Person Name:</th>
+	<th>Person Age:</th>
+	</tr>
+	<tr th:each="item:${personlist}">
+		<td th:text="${item.sname}">test</td>
+		<td th:text="${item.age}"></td>
+		</tr>
+	
+</table>
+
+</body>
+</html>
