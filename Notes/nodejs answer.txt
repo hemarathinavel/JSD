@@ -1,0 +1,53 @@
+Bulding scalable network application
+v8
+Single threaded with event loop
+fs
+npm
+console.log
+require
+process
+path
+Read evaluate print loop
+createserver
+htttp,fs,process
+to hold meta data
+setTimeout
+module.exports
+readfilesync
+mjs
+end
+__dirname
+__filename
+lbuv
+on
+emitnet.server
+npm install--save-dev
+Machinewide availability for CLI tools
+crypto
+Buffer
+node--v
+200
+chld_process
+cluster
+Executing CPU interviewwithout blockng
+process.emv
+parse
+process.nextTick
+Functions that have access the requestandresponse
+objects
+express.static
+dns
+end
+setHeader
+working with promisse and ayschronus code
+assert
+util
+npm update
+package-lock.jason
+Duplex
+Transform
+Pending callbacks
+
+
+
+

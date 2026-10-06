@@ -1,0 +1,13 @@
+Entities:
+
+Definition:
+
+An entity in Spring Data (specifically Spring Data JPA) represents a persistence-aware domain object that directly maps to a table in a relational database. Each instance of an entity corresponds to a row in that table.
+
+Annotations:
+
+Entities are typically marked with the @Entity annotation. Key properties within the entity are annotated with @Id to designate the primary key and @GeneratedValue for automatic ID generation.
+
+Purpose:
+
+Entities allow developers to interact with database data using object-oriented principles, abstracting away direct SQL interactions.

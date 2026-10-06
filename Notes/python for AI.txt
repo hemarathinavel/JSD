@@ -1,0 +1,20 @@
+import pyttsx3
+
+how to install pyttx3
+
+command prompt:right side
+	In[11]:pip install pyttsx3
+
+-------------------->
+	py:python
+	tts:text to speech
+	x3:python 3 versions
+engine=pyttsx3.init('sapi5')
+voices=engines.getProperty('voices')		#1 female voice
+					# 0 male voice					
+
+engine.setProperty('voice',voices[1].id)
+
+engine.say("your text")----------------->speech text
+engine.runAndWait()------------------------>wait after speech
+==================================================

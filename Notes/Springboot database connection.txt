@@ -1,0 +1,81 @@
+Springboot database connection:
+============================
+step1:
+	htttp://start.spring.io
+	dependencies:
+		web,dev,jpa,mysql
+step2:
+	eclipse open
+	file-->import->maven-->Existing project
+step 3:
+	application.properties:
+	====================
+spring.application.name=hemademoproject
+spring.datasource.url=jdbc:mysql://localhost:3306/hspring?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=12345
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.datasource-platform=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+
+step 4:
+	src/main,java-->create products java file(model)
+	ex:
+package com.hemadb.hemadatabase;
+package com.hemadb.hemademoproject;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Products {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
+	public Float getPrice() {
+		return price;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+
+	private String pname;
+	private Float price;
+	private int quality;
+	
+	public int getQuality() {
+		return quality;
+	}
+
+	public void setQuality(int quality) {
+		this.quality = quality;
+	}
+
+	public Long getID() {
+	return id;}
+
+}
+step5:
+	run-->rightclick-->src/main/java-->application.java-->run as-->java applicatons
+	goto check your mysql-->table will create automattically
+
+
