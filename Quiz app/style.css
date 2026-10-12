@@ -1,0 +1,88 @@
+:root {
+  --ink: #1f2a44;
+  --paper: #f4f7fb;
+  --accent: #ffc93c;
+  --good: #14a39a;
+  --bad: #e5484d;
+}
+
+body {
+  font-family: "Sora", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.quiz-nav { background: var(--ink); }
+.quiz-nav .navbar-brand { color: #fff; }
+.best-badge { background: var(--accent); color: var(--ink); font-weight: 600; }
+
+.quiz-card {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: 6px 6px 0 var(--ink);
+  padding: 2rem;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font-weight: 600;
+}
+.btn-accent:hover, .btn-accent:focus-visible { background: #ffb800; color: var(--ink); }
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 .25rem rgba(255, 201, 60, .5);
+}
+
+.progress { height: 10px; border: 1px solid var(--ink); background: #fff; }
+.progress-bar { background: var(--good); transition: width .3s; }
+
+.timer {
+  font-weight: 800;
+  padding: .15rem .7rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+.timer.low { background: var(--bad); color: #fff; border-color: var(--bad); }
+
+.option-btn {
+  text-align: left;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: .8rem 1rem;
+  color: var(--ink);
+  transition: background .15s;
+}
+.option-btn:hover:not(:disabled) { background: #fff6d9; }
+.option-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.option-btn.correct { background: var(--good); border-color: var(--good); color: #fff; }
+.option-btn.wrong { background: var(--bad); border-color: var(--bad); color: #fff; }
+.option-btn:disabled { cursor: not-allowed; }
+
+.score-circle {
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+  display: flex; align-items: baseline; justify-content: center;
+  padding-top: 38px;
+  font-size: 3rem; font-weight: 800;
+}
+.score-circle small { font-size: 1.1rem; color: #6b7690; }
+
+.stat { border: 2px solid var(--ink); border-radius: 10px; padding: .6rem; }
+.stat strong { display: block; font-size: 1.4rem; }
+
+.review-item { border-left: 5px solid var(--bad); padding: .5rem .8rem; margin-bottom: .8rem; background: var(--paper); }
+.review-item.ok { border-left-color: var(--good); }
+
+@media (max-width: 575px) {
+  .quiz-card { padding: 1.25rem; box-shadow: 4px 4px 0 var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
