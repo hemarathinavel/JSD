@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dashboard-card {
+            width: 100%;
+            max-width: 650px;
+            padding: 45px 30px;
+            background: white;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 25px 70px #0003;
+            animation: appear 0.6s ease;
+        }
+
+        .welcome-icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .dashboard-card p {
+            color: #77748b;
+            line-height: 1.8;
+        }
+
+        .user-badge {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 30px;
+            background: #eee8ff;
+            color: #7056e8;
+            font-weight: bold;
+        }
+
+        .dashboard-card .main-btn {
+            max-width: 220px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .feature {
+            padding: 16px;
+            flex: 1 1 130px;
+            border-radius: 14px;
+            background: #f6f3ff;
+            color: #493b78;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-card">
+        <div class="welcome-icon">🎉</div>
+
+        <span class="user-badge" id="userBadge"></span>
+
+        <h1 style="margin-top: 25px;">
+            Welcome to Nova!
+        </h1>
+
+        <p>
+            You have successfully logged in.<br>
+            Your journey starts here. Explore and enjoy!
+        </p>
+
+        <div class="features">
+            <div class="feature">
+                <div>✨</div>
+                <strong>Explore</strong>
+                <p>Discover new ideas</p>
+            </div>
+
+            <div class="feature">
+                <div>🚀</div>
+                <strong>Grow</strong>
+                <p>Make progress every day</p>
+            </div>
+
+            <div class="feature">
+                <div>💜</div>
+                <strong>Enjoy</strong>
+                <p>Make it your own space</p>
+            </div>
+        </div>
+
+        <button class="main-btn" id="logoutBtn">
+            Logout ↗
+        </button>
+    </div>
+
+    <script>
+        const username = sessionStorage.getItem("loggedInUser");
+
+        if (!username) {
+            window.location.replace("index.html");
+        } else {
+            document.getElementById("userBadge").textContent =
+                "👤 " + username;
+        }
+
+        document.getElementById("logoutBtn").addEventListener(
+            "click",
+            function () {
+                sessionStorage.removeItem("loggedInUser");
+                window.location.href = "index.html";
+            }
+        );
+    </script>
+
+</body>
+</html>

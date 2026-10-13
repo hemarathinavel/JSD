@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="logo">✦</div>
+
+        <h1 id="title">Welcome Back!</h1>
+        <p class="subtitle" id="subtitle">
+            Login to continue your journey
+        </p>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input id="username" type="text"
+                   placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <div class="password-box">
+                <input id="password" type="password"
+                       placeholder="Enter your password" required>
+                <button type="button" class="eye"
+                        id="togglePassword">Show</button>
+            </div>
+
+            <button class="main-btn" type="submit">Login →</button>
+        </form>
+
+        <form id="registerForm" class="hidden">
+            <label for="newUsername">Create Username</label>
+            <input id="newUsername" type="text"
+                   placeholder="Choose a username" required>
+
+            <label for="newPassword">Create Password</label>
+            <input id="newPassword" type="password"
+                   placeholder="Minimum 6 characters" minlength="6" required>
+
+            <button class="main-btn" type="submit">
+                Create Account →
+            </button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <p class="switch-text" id="switchText">
+            Don't have an account?
+            <a href="#" id="switchLink">Sign up</a>
+        </p>
+
+        <p class="footer">✦ YOUR SPACE. YOUR JOURNEY. ✦</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
